@@ -1,0 +1,18 @@
+form {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.buckets {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+input {
+  margin-left: 5px;
+  min-width: 200px;
+}
+
