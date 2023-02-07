@@ -1,18 +1,16 @@
-<form class="form">
+<form class="form" (ngSubmit)="solveChallenge()">
   <div class="buckets">
     <label>First bucket</label>
-    <input type="number" min="0" max="10" name="firstBucket" id="firstBucket" placeholder="Add first bucket capacity">
+    <input type="number" min="1" max="10" name="firstBucket" id="firstBucket" [(ngModel)]="firstBucket" placeholder="Add first bucket capacity">
   </div>
   <div class="buckets">
     <label>Second bucket</label>
-    <input type="number" min="0" max="10" name="secondBucket" id="secondBucket" placeholder="Add second bucket capacity">
+    <input type="number" min="1" max="10" name="secondBucket" id="secondBucket" [(ngModel)]="secondBucket" placeholder="Add second bucket capacity">
   </div>
   <div class="buckets">
-    <label>Third bucket</label>
-    <input type="number" min="0" max="10" name="thirdBucket" id="thirdBucket" placeholder="Add third bucket capacity">
+    <label>Amount wanted</label>
+    <input type="number" min="1" max="10" name="amountWanted" id="amountWanted" [(ngModel)]="amountWanted" placeholder="Add amount wanted">
   </div>
-  <div class="button">
     <input type="submit" value="Solve">
-  </div>
 </form>
 
