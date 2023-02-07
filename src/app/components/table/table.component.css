@@ -1,0 +1,10 @@
+.table {
+  display: flex;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-right: 5px;
+}

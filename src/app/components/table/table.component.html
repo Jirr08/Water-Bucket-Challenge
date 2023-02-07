@@ -1,14 +1,22 @@
-<table ng-repeat="x in names">
-  <ng-container matColumnDef="position">
-    <th>First Bucket</th>
-    <td></td>
-  </ng-container>
-  <ng-container matColumnDef="position">
-    <th>Second Bucket</th>
-    <td></td>
-  </ng-container>
-  <ng-container matColumnDef="position">
-    <th>Explanation</th>
-    <td></td>
-  </ng-container>
+<table>
+  <div class="table">
+    <div class="columns">
+      <th>First Bucket</th>
+      <div *ngFor="let item of firstBucketSteps">
+        <td >{{item}}</td>
+      </div>
+    </div>
+    <div class="columns">
+      <th>Second Bucket</th>
+      <div *ngFor="let item of secondBucketSteps">
+        <td >{{item}}</td>
+      </div>
+    </div>
+    <div class="columns">
+      <th>Explanation</th>
+      <div *ngFor="let item of explanationSteps">
+        <td >{{item}}</td>
+      </div>
+    </div>
+  </div>
 </table>
