@@ -63,11 +63,11 @@ export class BucketsComponent implements OnInit {
           if (this.amountWanted % 2 != 0) {
             this.explanationSteps.push("Can't be solve");
           } else {
-            this.fourthCase();
+            this.fifthCase();
             console.log('Fourth case');
           }
         } else {
-          this.fourthCase();
+          this.fifthCase();
           console.log('Fourth case');
         }
 
@@ -77,11 +77,11 @@ export class BucketsComponent implements OnInit {
           if (this.amountWanted % 2 != 0) {
             this.explanationSteps.push("Can't be solve");
           } else {
-            this.fifthCase();
+            this.fourthCase();
             console.log('Fifth case');
           }
         } else {
-          this.fifthCase();
+          this.fourthCase();
           console.log('Fifth case');
         }
       }
@@ -106,7 +106,7 @@ export class BucketsComponent implements OnInit {
     this.secondBucketSteps.push(this.secondBucket);
   }
 
-  // The first and the second bucket are different to the amount wanted but the first bucket is greater than the second bucket
+  // The first and the second bucket are different to the amount wanted but the second bucket is greater than the first bucket
   fourthCase() {
     this.firstBucketSteps.push(this.firstBucket);
     this.explanationSteps.push('Fill first');
@@ -117,9 +117,9 @@ export class BucketsComponent implements OnInit {
 
       this.firstBucketSteps.push(this.firstBucketSteps[this.firstBucketSteps.length - 1]);
       this.secondBucketSteps.push(this.secondBucketSteps[this.secondBucketSteps.length - 1]);
+
       this.secondBucketSteps.push(this.secondBucketSteps[this.secondBucketSteps.length - 1] += minimunValue);
       this.explanationSteps.push('Transfer to second');
-
       this.firstBucketSteps.push(this.firstBucketSteps[this.firstBucketSteps.length - 1] -= minimunValue);
 
       if (this.firstBucketSteps[this.firstBucketSteps.length - 1] == this.amountWanted || this.secondBucketSteps[this.secondBucketSteps.length - 1] == this.amountWanted) {
@@ -140,7 +140,7 @@ export class BucketsComponent implements OnInit {
     console.log(this.firstBucketSteps, this.secondBucketSteps);
   }
 
-  // The first and the second bucket are different to the amount wanted but the second bucket is greater than the first bucket
+  // The first and the second bucket are different to the amount wanted but the first bucket is greater than the second bucket
   fifthCase() {
     this.firstBucketSteps.push(0);
     this.secondBucketSteps.push(this.secondBucket);
